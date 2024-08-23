@@ -1,0 +1,56 @@
+---
+import "../styles/global.css"
+import Socials from "../components/Socials.astro"
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot/>
+    <div class="socials">
+      <Socials/>
+    </div>
+  </body>
+</html>
+<style>
+html {
+  display: flex;
+  justify-content: center;
+
+  background-image: url("../../public/Ghostp.jpeg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+body {
+  margin-top: 20px;
+  border-width: 1px;
+  min-height: 800px;
+  width: 800px;
+  border-color: red;
+  border-style: solid;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+.socials {
+  position:relative;
+  top: -204px;
+  left: 820px;
+  width: 70px;
+  border-style: solid;
+  border-width: 1px;
+
+}
+</style>

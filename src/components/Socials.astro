@@ -1,0 +1,35 @@
+---
+const socials = [
+  {
+    name: 'github', 
+    url: 'https://github.com/Alvorada9999'
+  },
+  {
+    name: 'twitter', 
+  },
+  {
+    name: 'youtube'
+  }
+]
+---
+
+{socials.map((e) => {
+  <!-- return <div class="social"><p>{e}</p></div> -->
+  return <div class="social"><a href={e.url} target="_blank"><p>{e.name}</p></a></div>
+})}
+<style>
+div {
+  width: 70px;
+  height: 70px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: green;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+p {
+  text-align:center;
+  text-justify:center;
+  position: relative;
+  top: 30px;
+}
+</style>

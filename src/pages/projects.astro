@@ -1,0 +1,15 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Banner from '../components/Banner.astro';
+import Menu from '../components/Menu.astro';
+import MenuOption from '../components/MenuOption.astro';
+const pageName = "Alvorada's Basement"
+---
+
+<Layout title={pageName}>
+  <Banner title={pageName}/>
+  <Menu>
+    <MenuOption name="About" url="/about" MenuOption/>
+    <MenuOption name="Projects" color="rgba(0, 0, 0, 0.2)" url="/projects" MenuOption/>
+  </Menu>
+</Layout>

@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Banner from '../components/Banner.astro';
+import Menu from '../components/Menu.astro';
+import MenuOption from '../components/MenuOption.astro';
+const pageName = "Alvorada's Basement"
+---
+
+<Layout title={pageName}>
+  <Banner title={pageName}/>
+  <Menu>
+    <MenuOption name="About" url="/about" MenuOption/>
+    <MenuOption name="Projects" url="/projects" MenuOption/>
+  </Menu>
+  <div>
+    <p>Welcome to my humble residence, the original owner has let me stay here for the time.</p>
+    <p>I hope you can have a good of a stay as much as myself.</p>
+    <p>The site will be receiving updates over time, I have other projects that require my presence as well.</p>
+  </div>
+</Layout>
+<style>
+div {
+  text-align: center;
+  margin: 10px;
+}
+</style>

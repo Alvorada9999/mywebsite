@@ -1,0 +1,32 @@
+---
+const { name, color, url } = Astro.props;
+---
+
+<div>
+  <a href={url}>
+    <p>
+      {name}
+    </p>
+  </a>
+</div>
+<style define:vars={{ color }}>
+div {
+  border-width: 1px;
+  height: 50px;
+  width: 100px;
+  border-color: orange;
+  border-style: solid;
+  background-color: var(--color);
+}
+a {
+  height: 50px;
+  width: 100px;
+  top: 20px;
+}
+p {
+  text-align:center;
+  text-justify:center;
+  position: relative;
+  top: 20px;
+}
+</style>
