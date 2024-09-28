@@ -18,10 +18,12 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <slot/>
-    <div class="socials">
-      <Socials/>
+    <div class="socials_position">
+      <div class="socials">
+        <Socials/>
+      </div>
     </div>
+    <slot/>
   </body>
 </html>
 <style>
@@ -44,13 +46,15 @@ body {
   border-style: solid;
   background-color: rgba(255, 255, 255, 0.85);
 }
-.socials {
-  position:relative;
-  top: -204px;
+.socials_position {
+  width: 0px;
+  height: 0px;
+  position: relative;
   left: 820px;
+}
+.socials {
   width: 70px;
   border-style: solid;
   border-width: 1px;
-
 }
 </style>
