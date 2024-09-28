@@ -1,21 +1,39 @@
 ---
 const socials = [
   {
-    name: 'github', 
+    name: 'github',
+    path: '/github.svg',
+    color: '#181717',
+    //https://stackoverflow.com/questions/22252472/how-can-i-change-the-color-of-an-svg-element
+    filter: 'filter: invert(0%) sepia(56%) saturate(4839%) hue-rotate(52deg) brightness(114%) contrast(82%);',
     url: 'https://github.com/Alvorada9999'
   },
   {
-    name: 'twitter', 
+    name: 'gitlab', 
+    path: '/gitlab.svg',
+    color: '#FC6D26',
+    filter: 'filter: invert(57%) sepia(36%) saturate(5768%) hue-rotate(345deg) brightness(102%) contrast(98%);',
+    url: 'https://gitlab.com/Alvorada9999'
   },
   {
-    name: 'youtube'
+    name: 'mal',
+    path: '/myanimelist.svg',
+    color: '#2E51A2',
+    filter: 'filter: invert(26%) sepia(79%) saturate(1314%) hue-rotate(201deg) brightness(84%) contrast(84%);',
+    url: 'https://myanimelist.net/profile/-Alvorada-'
+  },
+  {
+    name: 'steam',
+    path: '/steam.svg',
+    color: '#000000',
+    filter: 'filter: invert(0%) sepia(1%) saturate(7498%) hue-rotate(286deg) brightness(95%) contrast(100%);',
+    url: 'https://steamcommunity.com/profiles/76561198797780325'
   }
 ]
 ---
 
 {socials.map((e) => {
-  <!-- return <div class="social"><p>{e}</p></div> -->
-  return <div class="social"><a href={e.url} target="_blank"><p>{e.name}</p></a></div>
+  return <div class="social"><a href={e.url} target="_blank"><img src={e.path} style={e.filter}/></a></div>
 })}
 <style>
 div {
@@ -31,5 +49,12 @@ p {
   text-justify:center;
   position: relative;
   top: 30px;
+}
+img {
+  width: 50px;
+  height: 50px;
+  position:relative;
+  top: 10px;
+  left: 10px;
 }
 </style>
